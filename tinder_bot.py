@@ -9,7 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class TinderBot():
     #variables
-    swipesPerMinute = 60
+    swipesPerMinute = 90
     chromeDriver = ".\chromedriver_win32\\chromedriver.exe"
     websiteLink = "https://tinder.com/"
     likeXpath = '//*[@id="content"]/div/div[1]/div/main/div[1]/div/div/div[1]/div/div[2]/div[4]/button'
