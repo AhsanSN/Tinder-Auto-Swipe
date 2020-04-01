@@ -44,6 +44,8 @@ class TinderBot():
 
     def auto_swipe(self):
         while True:
+            if(isPageLoaded()==False):
+                sleep(30)
             sleep(60/self.swipesPerMinute)
             try:
                 # 80 to 20 percentage
@@ -65,6 +67,15 @@ class TinderBot():
     def close_match(self):
         match_popup = self.driver.find_element_by_xpath(self.closeMatch)
         match_popup.click()
+
+    def isPageLoaded(self):
+        try:
+            self.driver.find_element_by_xpath(self.closeMatch)
+            return True
+        except Exception:
+            return False
+        return
+        
 
     
 bot = TinderBot()
